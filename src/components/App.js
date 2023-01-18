@@ -5,7 +5,7 @@ import UserContext from "../contexts/UserContext";
 
 import TelaLogin from "./TelaLogin";
 import TelaCadastro from "./TelaCadastro";
-
+import Home from "./Home";
 
 import GlobalStyle from "../styles/globalStyles";
 
@@ -20,6 +20,7 @@ export default function App(){
                     <Routes>
                         <Route path="/" element={<TelaLogin />} />
                         <Route path="/cadastro" element={<TelaCadastro />} />
+                        <Route path="/home" element={<Home />} />
                     </Routes>
                 </BrowserRouter>
             </UserContext.Provider>  

@@ -68,8 +68,8 @@ export default function TelaCadastro(){
                 <form onSubmit={handleSignUp} >
                     <input type="text" name="nome" placeholder="Nome" value={formData.nome} onChange={handleForm} required/>
                     <input type="email" name="email" placeholder="E-mail" value={formData.email} onChange={handleForm} required />
-                    <input type="text" name="senha" placeholder="Senha" value={formData.senha} onChange={handleForm} required/>
-                    <input type="text" name="confirmacaoDeSenha" placeholder="Confirme a senha" value={formData.confirmacaoDeSenha} onChange={handleForm} required/>
+                    <input type="password" name="senha" placeholder="Senha" value={formData.senha} onChange={handleForm} required/>
+                    <input type="password" name="confirmacaoDeSenha" placeholder="Confirme a senha" value={formData.confirmacaoDeSenha} onChange={handleForm} required/>
                     <div>
                         <button type="submit">Cadastrar</button>
                     </div>
@@ -120,7 +120,7 @@ const FormularioCadastro = styled.div`
         width: 100%;
         height: 50px;
         padding-left: 20px;
-        font-family: 'Lexend Deca';
+        font-family: 'Raleway';
         font-style: normal;
         font-weight: 400;
         font-size: 20px;
@@ -135,7 +135,7 @@ const FormularioCadastro = styled.div`
         background-color: #A328D6;
         border-radius: 5px;
         border: none;
-        font-family: 'Lexend Deca';
+        font-family: 'Raleway';
         font-style: normal;
         font-weight: 400;
         font-size: 20px;

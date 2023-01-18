@@ -57,7 +57,7 @@ a {
 }
 
 body {
-    font-family: 'Lexend Deca', sans-serif;
+    font-family: 'Raleway', sans-serif;
 	background-color: #9059BE;
 }
 `;
