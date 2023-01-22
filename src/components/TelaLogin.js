@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import { useContext, useState } from "react";
-import UserContext from "../contexts/UserContext";
 import axios from "axios";
+import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import TokenContext from "../contexts/TokenContext";
 
 import logo from "../assets/logo.png"
 
@@ -14,7 +14,7 @@ export default function TelaLogin(){
   const [senha, setSenha] = useState("");
   const navigate = useNavigate();
 
-  const { setUser } = useContext(UserContext);
+  const { setToken } = useContext(TokenContext);
 
   function handleLogin(e){
 
@@ -25,15 +25,13 @@ export default function TelaLogin(){
       senha
     }
 
-    const promise = axios.post(`${URL}`, body);
+    const promise = axios.post(`${URL}/entrar`, body);
 
     promise.then((response) => {
-      const {data} = response;
+      const {data:token} = response;
 
-      setUser({
-        nome: data.nome,
-        email:data.email,
-        senha: data.senha
+      setToken({
+        token
       });
 
       navigate("/home");
@@ -44,7 +42,7 @@ export default function TelaLogin(){
       alert(message);
       setEmail("");
       setSenha("");
-    })
+    });
   }
 
   function montarFormularioLogin(){
