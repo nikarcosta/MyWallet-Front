@@ -9,7 +9,7 @@ import logo from "../assets/logo.png";
 export default function TelaCadastro(){
 
 
-    const URL = "http://localhost:5000";
+    const URL = "http://localhost:5001";
 
     const navigate = useNavigate();
 

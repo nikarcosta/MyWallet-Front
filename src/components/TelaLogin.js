@@ -8,7 +8,7 @@ import logo from "../assets/logo.png"
 
 export default function TelaLogin(){
 
-  const URL = "http://localhost:5000";
+  const URL = "http://localhost:5001";
 
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");

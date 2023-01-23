@@ -6,7 +6,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 export default function Saidas(){
 
-    const URL = "http://localhost:5000";
+    const URL = "http://localhost:5001";
 
 
     const [valor, setValor] = useState("");
