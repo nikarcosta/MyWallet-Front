@@ -2,14 +2,13 @@ import styled from "styled-components";
 import axios from "axios";
 import { useContext, useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import TokenContext from "../contexts/TokenContext";
-import UserContext from "../contexts/UserContext";
 
+import TokenContext from "../contexts/TokenContext";
 import vector from "../assets/vector.png"
 
 export default function Home(){
 
-  const URL = "http://localhost:5001";
+  const URL = "http://localhost:5000";
 
   const { token } = useContext(TokenContext);
   const navigate = useNavigate();
@@ -51,7 +50,7 @@ export default function Home(){
 
   function RequisitarListaDeTransacoes(){
     useEffect(() => {
-      const promise = axios.get(`${URL}/minhas-transacoes`, config);
+      const promise = axios.get(`${URL}/movimentacoes`, config);
 
       promise.then((response) => {
         const { data } = response;

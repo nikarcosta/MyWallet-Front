@@ -9,7 +9,7 @@ import logo from "../assets/logo.png";
 export default function TelaCadastro(){
 
 
-    const URL = "http://localhost:5001";
+    const URL = "http://localhost:5000";
 
     const navigate = useNavigate();
 
@@ -145,7 +145,6 @@ const FormularioCadastro = styled.div`
 
     
 `;
-
 
 const StyledLink = styled(Link)`
     height: 40px;

@@ -2,13 +2,13 @@ import styled from "styled-components";
 import axios from "axios";
 import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import TokenContext from "../contexts/TokenContext";
 
+import TokenContext from "../contexts/TokenContext";
 import logo from "../assets/logo.png"
 
 export default function TelaLogin(){
 
-  const URL = "http://localhost:5001";
+  const URL = "http://localhost:5000";
 
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
